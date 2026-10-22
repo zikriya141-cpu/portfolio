@@ -38,9 +38,7 @@ const CONFIG = {
 
   // Your GitHub username — used to build every "View on GitHub" link
   // automatically from the "repo" field of each project below.
-  // Left empty because zikriya141-cpu has no public repos yet, so the project
-  // links would 404. Set it back to "zikriya141-cpu" once the repos are public.
-  github: "",
+  github: "zikriya141-cpu",
 
   // ---------------------------------------------------------------- socials
   socials: [

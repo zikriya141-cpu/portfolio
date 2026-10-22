@@ -53,11 +53,11 @@ const CONFIG = {
     heading: "A little about me",
     text: [
       "I'm Zikriya — I build things that are heavy on the logic and still easy on the eyes.",
-      "Most of my work sits where machine learning meets the web: a student-performance predictor, a traffic-congestion system, and a marketplace built on Laravel. Every one of them started as a 'what if this actually worked?' idea and ended with a deployed, tested application.",
+      "Most of my work sits where machine learning meets the web: a student-performance predictor, a traffic-congestion system, an X-ray screening assistant, and a marketplace built on Laravel. Every one of them started as a 'what if this actually worked?' idea and ended with a deployed, tested application.",
       "I build the model and the interface, the database and the deployment — and I care about the boring parts too: tests, error states, and code that the next person can read."
     ],
     stats: [
-      { value: "4",   label: "Projects shipped" },
+      { value: "5",   label: "Projects shipped" },
       { value: "81%", label: "Model test accuracy" },
       { value: "17",  label: "Automated tests" },
       { value: "3",   label: "Stacks in production" }
@@ -75,7 +75,7 @@ const CONFIG = {
   ],
 
   tools: [
-    "Python", "Flask", "FastAPI", "PyTorch", "Scikit-learn", "SHAP",
+    "Python", "Flask", "FastAPI", "PyTorch", "Scikit-learn", "SHAP", "Streamlit",
     "Laravel", "PHP", "Blade", "MySQL", "SQLite", "JavaScript",
     "Tailwind CSS", "Bootstrap 5", "Chart.js", "Vite", "Git", "Netlify"
   ],
@@ -108,6 +108,20 @@ const CONFIG = {
   // Filters are auto-generated from the "category" field.
   // Images live in assets/works/ (the .svg covers are generated placeholders).
   works: [
+    {
+      title: "AI X-Ray Assistant",
+      category: "AI / ML",
+      year: "2026",
+      cover: "assets/works/xray.svg",
+      gallery: ["assets/works/xray.svg"],
+      summary:
+        "A chest X-ray pneumonia screening assistant built as a Final Year Project. Two DenseNet121 models handle pediatric (Normal / Bacterial / Viral) and adult (Normal / Pneumonia) scans, Grad-CAM heatmaps show what the model looked at, and the Streamlit app supports batch screening and PDF reports. Built on an open-source base by Muhammad Saad Khan.",
+      stack: ["Python", "PyTorch", "DenseNet121", "Streamlit", "Grad-CAM", "TorchXRayVision"],
+      metrics: ["~87% test accuracy", "98.6% sensitivity", "Dual pediatric + adult models", "Grad-CAM explainability"],
+      repo: "chest-xray-analysis",
+      accent: "#38bdf8",
+      wide: true
+    },
     {
       title: "EduPredict",
       category: "AI / ML",

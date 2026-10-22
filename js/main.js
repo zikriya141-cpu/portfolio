@@ -249,6 +249,7 @@ const workCards = [];
     const isWide = w.wide !== undefined ? w.wide : i % 3 === 0;
     card.className = "work" + (isWide ? " wide" : "");
     card.style.transitionDelay = (i % 3) * 80 + "ms";
+    const repoUrl = w.link || (w.repo && C.github ? `https://github.com/${C.github}/${w.repo}` : "");
     card.innerHTML = `
       <div class="workMedia">
         <img src="${esc(w.cover)}" alt="${esc(w.title)}" loading="lazy">
@@ -266,6 +267,7 @@ const workCards = [];
           <span class="workMeta">${esc(w.category)} · ${esc(w.year)}</span>
         </div>
         ${w.stack?.length ? `<div class="workStack">${w.stack.slice(0, 3).map(t => `<span>${esc(t)}</span>`).join("")}</div>` : ""}
+        ${repoUrl ? `<a class="workRepo" href="${esc(repoUrl)}" target="_blank" rel="noopener" data-cursor="link" aria-label="View ${esc(w.title)} on GitHub"><span class="wrLong">View on GitHub</span><span class="wrShort">GitHub</span> <span class="wrArrow">↗</span></a>` : ""}
         <span class="workArrow">↗</span>
       </div>`;
 
@@ -276,7 +278,10 @@ const workCards = [];
       media.style.background = `linear-gradient(140deg, ${w.accent}44, var(--bg2))`;
     };
 
-    card.addEventListener("click", () => openLightbox(i));
+    card.addEventListener("click", e => {
+      if (e.target.closest("a")) return;
+      openLightbox(i);
+    });
     grid.appendChild(card);
     workCards.push(card);
   });

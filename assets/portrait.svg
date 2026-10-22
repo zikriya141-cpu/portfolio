@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="1000" viewBox="0 0 800 1000">
+  <defs>
+    <linearGradient id="pg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#171720"/>
+      <stop offset="1" stop-color="#0b0b0f"/>
+    </linearGradient>
+    <radialGradient id="pr" cx="0.5" cy="0.32" r="0.55">
+      <stop offset="0" stop-color="#ff7a5c" stop-opacity="0.4"/>
+      <stop offset="1" stop-color="#ff7a5c" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="pn"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="3"/></filter>
+  </defs>
+  <rect width="800" height="1000" fill="url(#pg)"/>
+  <rect width="800" height="1000" fill="url(#pr)"/>
+  <circle cx="400" cy="360" r="140" fill="#ffffff" fill-opacity="0.08"/>
+  <path d="M170 1000 q230 -330 460 0 z" fill="#ffffff" fill-opacity="0.08"/>
+  <rect width="800" height="1000" filter="url(#pn)" opacity="0.06"/>
+  <text x="400" y="520" text-anchor="middle" font-family="Georgia, serif" font-style="italic" font-size="44" fill="#ffffff" fill-opacity="0.55">your photo here</text>
+</svg>

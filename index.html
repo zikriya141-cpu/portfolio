@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Portfolio — Your Name</title>
+<meta name="description" content="Portfolio of Your Name — Creative Developer & Designer.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='88'%3E%E2%9C%A6%3C/text%3E%3C/svg%3E">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/style.css?v=20261023">
+</head>
+<body>
+
+<!-- ============================ LOADER ============================ -->
+<div id="loader" class="loader">
+  <div class="loaderInner">
+    <span class="loaderName" id="loaderName">Your Name</span>
+    <span class="loaderCount" id="loaderCount">0</span>
+  </div>
+  <div class="loaderBar"><span id="loaderFill"></span></div>
+</div>
+
+<!-- ============================ CURSOR ============================ -->
+<div class="cursor" id="cursor" aria-hidden="true"></div>
+<div class="cursorDot" id="cursorDot" aria-hidden="true"></div>
+
+<!-- ============================ HEADER ============================ -->
+<header class="header" id="header">
+  <a class="logo" href="#top" data-cursor="link"><span class="logoMark">◆</span><span id="logoText">Your Name</span></a>
+
+  <nav class="nav" id="nav">
+    <a href="#work" data-cursor="link">Work</a>
+    <a href="#about" data-cursor="link">About</a>
+    <a href="#services" data-cursor="link">Services</a>
+    <a href="#process" data-cursor="link">Process</a>
+    <a href="#contact" data-cursor="link">Contact</a>
+  </nav>
+
+  <div class="headerRight">
+    <button class="themeBtn" id="themeBtn" type="button" aria-label="Toggle theme" data-cursor="link">
+      <span class="themeIcon" id="themeIcon">☾</span>
+    </button>
+    <button class="menuBtn" id="menuBtn" type="button" aria-label="Menu"><span></span><span></span></button>
+  </div>
+</header>
+
+<!-- ============================ HERO ============================ -->
+<main id="top">
+<section class="hero">
+  <div class="heroGlow" aria-hidden="true"></div>
+
+  <div class="heroMeta">
+    <span class="dot"></span>
+    <span id="heroAvail">Available for freelance work</span>
+    <span class="sep">/</span>
+    <span id="heroLoc">Your City, Pakistan</span>
+  </div>
+
+  <p class="heroKicker" id="heroKicker"></p>
+
+  <h1 class="heroTitle">
+    <span class="line" id="heroLine1"></span>
+    <span class="line italic" id="heroLine2"></span>
+  </h1>
+
+  <div class="heroBottom">
+    <p class="heroTagline" id="heroTagline"></p>
+    <div class="heroActions">
+      <a class="btn btnPrimary" href="#work" data-cursor="link">See my work <span>↘</span></a>
+      <a class="btn btnGhost" id="cvBtn" href="#" data-cursor="link">Download CV <span>↓</span></a>
+    </div>
+  </div>
+
+  <div class="heroBadge" id="heroBadgeWrap">
+    <span class="badgeInner">
+      <span id="heroBadge">Open to work</span>
+    </span>
+  </div>
+
+  <div class="scrollHint"><span>scroll</span><span class="lineDown"></span></div>
+</section>
+
+<!-- ============================ MARQUEE ============================ -->
+<div class="marqueeBand" aria-hidden="true">
+  <div class="marqueeTrack" id="marqueeTop"></div>
+</div>
+
+<!-- ============================ WORK ============================ -->
+<section class="section" id="work">
+  <div class="secHead reveal">
+    <span class="secNum">01</span>
+    <h2 class="secTitle">Selected <em>work</em></h2>
+    <p class="secSub" id="workSub">A few things I have designed, built and shipped.</p>
+  </div>
+
+  <div class="filters reveal" id="filters"></div>
+
+  <div class="workGrid" id="workGrid"></div>
+</section>
+
+<!-- ============================ ABOUT ============================ -->
+<section class="section about" id="about">
+  <div class="secHead reveal">
+    <span class="secNum">02</span>
+    <h2 class="secTitle">A little <em>about me</em></h2>
+  </div>
+
+  <div class="aboutGrid">
+    <div class="aboutPortrait reveal">
+      <div class="portraitFrame">
+        <img id="portrait" alt="Portrait">
+        <span class="portraitRing" aria-hidden="true"></span>
+      </div>
+    </div>
+
+    <div class="aboutBody reveal">
+      <p class="aboutLead" id="aboutLead"></p>
+      <div id="aboutText"></div>
+      <div class="stats" id="stats"></div>
+    </div>
+  </div>
+
+  <div class="skillsBlock reveal">
+    <h3 class="miniTitle">What I do well</h3>
+    <div class="skills" id="skills"></div>
+    <div class="tools" id="tools"></div>
+  </div>
+</section>
+
+<!-- ============================ SERVICES ============================ -->
+<section class="section" id="services">
+  <div class="secHead reveal">
+    <span class="secNum">03</span>
+    <h2 class="secTitle">What I <em>offer</em></h2>
+    <p class="secSub">Four things I do properly, from the first sketch to the last deploy.</p>
+  </div>
+
+  <div class="serviceGrid" id="serviceGrid"></div>
+</section>
+
+<!-- ============================ PROCESS ============================ -->
+<section class="section process" id="process">
+  <div class="secHead reveal">
+    <span class="secNum">04</span>
+    <h2 class="secTitle">How we <em>work</em></h2>
+  </div>
+
+  <div class="processList" id="processList"></div>
+</section>
+
+<!-- ============================ MARQUEE 2 ============================ -->
+<div class="marqueeBand alt" aria-hidden="true">
+  <div class="marqueeTrack reverse" id="marqueeBottom"></div>
+</div>
+
+<!-- ============================ CONTACT ============================ -->
+<section class="section contact" id="contact">
+  <div class="secHead reveal">
+    <span class="secNum">05</span>
+    <h2 class="secTitle" id="contactHeading">Let's build <em>something</em></h2>
+    <p class="secSub" id="contactText"></p>
+  </div>
+
+  <div class="contactGrid">
+    <div class="contactInfo reveal">
+      <a class="contactLine" id="emailLink" href="#" data-cursor="link">
+        <span class="clLabel">Email</span>
+        <span class="clValue" id="emailText"></span>
+      </a>
+      <a class="contactLine" id="phoneLink" href="#" data-cursor="link">
+        <span class="clLabel">Phone</span>
+        <span class="clValue" id="phoneText"></span>
+      </a>
+      <div class="contactLine">
+        <span class="clLabel">Social</span>
+        <span class="clValue socials" id="socials"></span>
+      </div>
+      <p class="contactNote" id="contactNote"></p>
+    </div>
+
+    <form class="contactForm reveal" id="contactForm" name="portfolio-contact" method="POST" data-netlify="true" novalidate>
+      <input type="hidden" name="form-name" value="portfolio-contact">
+      <p class="honeypot"><label>Leave this empty: <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+
+      <div class="field">
+        <input id="fName" name="name" type="text" placeholder=" " autocomplete="name" required>
+        <label for="fName">Your name</label>
+      </div>
+
+      <div class="field">
+        <input id="fEmail" name="email" type="email" placeholder=" " autocomplete="email" required>
+        <label for="fEmail">Your email</label>
+      </div>
+
+      <div class="field">
+        <input id="fBudget" name="budget" type="text" placeholder=" " autocomplete="off">
+        <label for="fBudget">Budget (optional)</label>
+      </div>
+
+      <div class="field">
+        <textarea id="fMsg" name="message" rows="4" placeholder=" " required></textarea>
+        <label for="fMsg">Tell me about the project</label>
+      </div>
+
+      <button class="btn btnPrimary btnFull" type="submit" data-cursor="link">Send message <span>↗</span></button>
+      <p class="formStatus" id="formStatus"></p>
+    </form>
+  </div>
+</section>
+</main>
+
+<!-- ============================ FOOTER ============================ -->
+<footer class="footer">
+  <div class="footerTop">
+    <h3 class="footerBig" id="footerBig">Let's talk</h3>
+    <a class="footerMail" id="footerMail" href="#" data-cursor="link">hello@yourdomain.com</a>
+  </div>
+  <div class="footerBottom">
+    <span>© <span id="year"></span> <span id="footerName">Your Name</span></span>
+    <span id="footerNote"></span>
+    <button class="toTop" id="toTop" type="button" data-cursor="link">Back to top ↑</button>
+  </div>
+</footer>
+
+<!-- ============================ LIGHTBOX ============================ -->
+<div class="lightbox" id="lightbox" hidden>
+  <button class="lbClose" id="lbClose" type="button" aria-label="Close" data-cursor="link">✕</button>
+  <button class="lbPrev" id="lbPrev" type="button" aria-label="Previous" data-cursor="link">←</button>
+  <button class="lbNext" id="lbNext" type="button" aria-label="Next" data-cursor="link">→</button>
+  <figure class="lbFigure">
+    <img id="lbImg" alt="">
+    <figcaption>
+      <h4 id="lbTitle"></h4>
+      <p id="lbSummary"></p>
+      <div class="lbMetrics" id="lbMetrics"></div>
+      <div class="lbStack" id="lbStack"></div>
+      <div class="lbTags" id="lbTags"></div>
+      <a class="lbLink" id="lbLink" href="#" target="_blank" rel="noopener" data-cursor="link">View on GitHub ↗</a>
+    </figcaption>
+  </figure>
+</div>
+
+<script src="js/config.js?v=20261023"></script>
+<script src="js/main.js?v=20261023"></script>
+</body>
+</html>

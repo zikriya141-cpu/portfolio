@@ -27,7 +27,7 @@ function setHTML(el, html) { if (el) el.innerHTML = html; }
   function apply(mode) {
     document.documentElement.setAttribute("data-theme", mode);
     const icon = $("themeIcon");
-    if (icon) icon.textContent = mode === "light" ? "☀" : "☾";
+    if (icon) icon.textContent = mode === "light" ? "â˜€" : "â˜¾";
   }
 
   $("themeBtn").addEventListener("click", () => {
@@ -152,7 +152,7 @@ function startHero() {
    STATIC CONTENT
    ========================================================================== */
 (function fill() {
-  document.title = `${C.name} — Portfolio`;
+  document.title = `${C.name} â€” Portfolio`;
   setText($("loaderName"), C.name);
   setText($("logoText"), C.name);
   setText($("heroAvail"), C.availability);
@@ -176,7 +176,12 @@ function startHero() {
   $("footerBig").textContent = "Let's talk";
 
   const cvBtn = $("cvBtn");
-  if (C.cvUrl) { cvBtn.href = C.cvUrl; cvBtn.setAttribute("target", "_blank"); cvBtn.setAttribute("rel", "noopener"); }
+  if (C.cvUrl) { 
+    cvBtn.href = C.cvUrl; 
+    cvBtn.setAttribute('download', 'Zikriya-Khan-CV.pdf');
+    cvBtn.setAttribute('target', '_blank'); 
+    cvBtn.setAttribute('rel', 'noopener'); 
+  }
   else cvBtn.remove();
 
   // contact form name (Netlify needs it in the markup at build time)
@@ -264,11 +269,11 @@ const workCards = [];
         <span class="workIndex">${String(i + 1).padStart(2, "0")}</span>
         <div class="workMain">
           <h3>${esc(w.title)}</h3>
-          <span class="workMeta">${esc(w.category)} · ${esc(w.year)}</span>
+          <span class="workMeta">${esc(w.category)} Â· ${esc(w.year)}</span>
         </div>
         ${w.stack?.length ? `<div class="workStack">${w.stack.slice(0, 3).map(t => `<span>${esc(t)}</span>`).join("")}</div>` : ""}
-        ${repoUrl ? `<a class="workRepo" href="${esc(repoUrl)}" target="_blank" rel="noopener" data-cursor="link" aria-label="View ${esc(w.title)} on GitHub"><span class="wrLong">View on GitHub</span><span class="wrShort">GitHub</span> <span class="wrArrow">↗</span></a>` : ""}
-        <span class="workArrow">↗</span>
+        ${repoUrl ? `<a class="workRepo" href="${esc(repoUrl)}" target="_blank" rel="noopener" data-cursor="link" aria-label="View ${esc(w.title)} on GitHub"><span class="wrLong">View on GitHub</span><span class="wrShort">GitHub</span> <span class="wrArrow">â†—</span></a>` : ""}
+        <span class="workArrow">â†—</span>
       </div>`;
 
     const img = card.querySelector("img");
@@ -338,7 +343,7 @@ function showLightbox(workIndex, imgIndex) {
   const url = w.link || (w.repo && C.github ? `https://github.com/${C.github}/${w.repo}` : "");
   if (url) {
     link.href = url;
-    link.textContent = w.link && !w.repo ? "View project ↗" : "View on GitHub ↗";
+    link.textContent = w.link && !w.repo ? "View project â†—" : "View on GitHub â†—";
     link.style.display = "";
   } else {
     link.style.display = "none";
@@ -452,13 +457,13 @@ $("contactForm").addEventListener("submit", async e => {
 
   if (sent) {
     status.className = "formStatus ok";
-    status.textContent = "Message sent — I will get back to you soon.";
+    status.textContent = "Message sent â€” I will get back to you soon.";
     e.target.reset();
   } else {
     // not on Netlify: open the visitor's mail app instead
     status.className = "formStatus ok";
     status.textContent = "Opening your mail app...";
-    location.href = `mailto:${C.email}?subject=${encodeURIComponent("Portfolio enquiry from " + name)}&body=${encodeURIComponent(message + "\n\n— " + name + " (" + email + ")")}`;
+    location.href = `mailto:${C.email}?subject=${encodeURIComponent("Portfolio enquiry from " + name)}&body=${encodeURIComponent(message + "\n\nâ€” " + name + " (" + email + ")")}`;
   }
 });
 

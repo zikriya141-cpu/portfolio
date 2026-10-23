@@ -92,7 +92,7 @@ function setHTML(el, html) { if (el) el.innerHTML = html; }
   const el = $("loader"), count = $("loaderCount"), fill = $("loaderFill");
   let n = 0;
   const timer = setInterval(() => {
-    n += Math.random() * 14 + 5;
+    n += Math.random() * 9 + 4;
     if (n >= 100) n = 100;
     count.textContent = Math.floor(n);
     fill.style.width = n + "%";
@@ -102,10 +102,10 @@ function setHTML(el, html) { if (el) el.innerHTML = html; }
         el.classList.add("done");
         document.body.style.overflow = "";
         startHero();
-        setTimeout(() => el.remove(), 800);
-      }, 350);
+        setTimeout(() => el.remove(), 900);
+      }, 450);
     }
-  }, reduced ? 10 : 130);
+  }, reduced ? 10 : 160);
 
   document.body.style.overflow = "hidden";
 })();

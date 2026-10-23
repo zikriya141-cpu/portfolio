@@ -69,9 +69,9 @@ body::after {
   inset: -50%;
   pointer-events: none;
   z-index: 9998;
-  opacity: .045;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)'/%3E%3C/svg%3E");
-  animation: grain 8s steps(6) infinite;
+  opacity: .028;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)'/%3E%3C/svg%3E");
+  animation: grain 10s steps(6) infinite;
 }
 @keyframes grain {
   0%,100% { transform: translate(0,0); }
@@ -151,10 +151,10 @@ p { margin: 0 0 1rem; }
   opacity: 0;
   transition: opacity .3s, width .25s var(--ease), height .25s var(--ease), background .25s;
 }
-.cursor { width: 34px; height: 34px; border: 1px solid #fff; }
-.cursorDot { width: 5px; height: 5px; background: #fff; }
+.cursor { width: 28px; height: 28px; border: 1px solid #fff; }
+.cursorDot { width: 4px; height: 4px; background: #fff; }
 body.cursorOn .cursor, body.cursorOn .cursorDot { opacity: 1; }
-.cursor.grow { width: 70px; height: 70px; background: #fff; }
+.cursor.grow { width: 56px; height: 56px; background: #fff; }
 .cursor.grow + .cursorDot { opacity: 0; }
 
 @media (hover: none), (max-width: 900px) {
@@ -193,7 +193,7 @@ body.cursorOn .cursor, body.cursorOn .cursorDot { opacity: 1; }
   letter-spacing: -.02em;
   font-size: 1.02rem;
 }
-.logoMark { color: var(--accent); font-size: .8rem; animation: spin 9s linear infinite; display: inline-block; }
+.logoMark { color: var(--accent); font-size: .8rem; animation: spin 16s linear infinite; display: inline-block; }
 @keyframes spin { to { transform: rotate(360deg); } }
 
 .nav { display: flex; gap: 2rem; font-size: .92rem; }
@@ -203,18 +203,18 @@ body.cursorOn .cursor, body.cursorOn .cursorDot { opacity: 1; }
   transition: color .25s;
   padding: .2rem 0;
 }
-.nav a::after {
-  content: "";
-  position: absolute;
-  left: 0; bottom: 0;
-  width: 100%; height: 1px;
-  background: var(--accent);
-  transform: scaleX(0);
-  transform-origin: right;
-  transition: transform .4s var(--ease);
-}
-.nav a:hover { color: var(--text); }
-.nav a:hover::after { transform: scaleX(1); transform-origin: left; }
+  .nav a::after {
+    content: "";
+    position: absolute;
+    left: 0; bottom: -2px;
+    width: 100%; height: 1px;
+    background: var(--accent);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform .5s var(--ease);
+  }
+  .nav a:hover { color: var(--text); }
+  .nav a:hover::after { transform: scaleX(1); transform-origin: left; }
 
 .headerRight { display: flex; align-items: center; gap: .6rem; }
 .themeBtn {
@@ -403,9 +403,9 @@ body.menuOpen .menuBtn span:nth-child(2) { transform: translateY(-3.5px) rotate(
   color: var(--muted);
   text-align: center;
   padding: 1rem;
-  animation: spin 18s linear infinite;
+  animation: spin 26s linear infinite;
 }
-.badgeInner > span { animation: spin 18s linear infinite reverse; display: block; }
+.badgeInner > span { animation: spin 26s linear infinite reverse; display: block; }
 
 .scrollHint {
   position: absolute;
@@ -555,10 +555,10 @@ body.menuOpen .menuBtn span:nth-child(2) { transform: translateY(-3.5px) rotate(
 .workMedia img {
   width: 100%; height: 100%;
   object-fit: cover;
-  transition: transform 1s var(--ease), filter .6s;
-  filter: saturate(.85);
+  transition: transform 1.1s var(--ease), filter .7s;
+  filter: saturate(.9);
 }
-.work:hover .workMedia img { transform: scale(1.06); }
+.work:hover .workMedia img { transform: scale(1.04); }
 .workOverlay {
   position: absolute;
   inset: 0;

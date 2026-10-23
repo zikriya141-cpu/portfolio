@@ -14,13 +14,11 @@ const CONFIG = {
   phone: "+92 333 8802939",
 
   tagline:
-    "I build real, working software — AI systems that predict, web apps people " +
-    "actually use, and interfaces that feel good to touch.",
+    "I build practical things at the intersection of AI and the web.",
 
   intro:
-    "Final-year Computer Science student focused on AI and full-stack development. " +
-    "I like taking a messy real-world problem, modelling it properly, and shipping " +
-    "something that works end to end.",
+    "Final-year Computer Science student focused on AI, Machine Learning and full-stack development. " +
+    "I enjoy turning real problems into clean, working solutions from idea to deployment.",
 
   marquee: [
     "Python",
@@ -49,12 +47,12 @@ const CONFIG = {
 
   // ---------------------------------------------------------------- about
   about: {
-    portrait: "assets/portrait.svg",   // apni photo yahan (jpg/png bhi chalega)
+    portrait: "assets/portrait.svg",
     heading: "A little about me",
     text: [
-      "I'm Zikriya — I build things that are heavy on the logic and still easy on the eyes.",
-      "Most of my work sits where machine learning meets the web: a student-performance predictor, a traffic-congestion system, an X-ray screening assistant, and a marketplace built on Laravel. Every one of them started as a 'what if this actually worked?' idea and ended with a deployed, tested application.",
-      "I build the model and the interface, the database and the deployment — and I care about the boring parts too: tests, error states, and code that the next person can read."
+      "I'm Zikriya — a builder who cares more about things actually working than overcomplicating them.",
+      "I like working where logic meets UI: building ML models, wiring them into clean web apps, and making sure they're easy to use. From prediction systems and traffic intelligence to medical imaging and Laravel marketplaces, I focus on shipping end-to-end projects.",
+      "Detail matters to me — structure, readability and getting the small things right."
     ],
     stats: [
       { value: "5",   label: "Projects shipped" },
@@ -85,22 +83,22 @@ const CONFIG = {
     {
       icon: "◐",
       title: "AI / ML Systems",
-      text: "Classification, forecasting and explainable models — trained, evaluated, and wired into a working app."
+      text: "Pragmatic models trained with the right approach — focused on accuracy, clarity and real use cases."
     },
     {
       icon: "◇",
       title: "Full-Stack Web Apps",
-      text: "Laravel and Flask applications with real auth, roles, dashboards and clean database design."
+      text: "End-to-end apps with clean structure, sensible auth, and solid database design."
     },
     {
       icon: "△",
       title: "APIs & Backends",
-      text: "REST APIs with validation, error handling, background jobs and documentation."
+      text: "Simple, reliable REST APIs built to be easy to integrate and maintain."
     },
     {
       icon: "◎",
       title: "Front-End Interfaces",
-      text: "Responsive, accessible dashboards and landing pages — built to look sharp on every screen."
+      text: "Minimal, responsive interfaces that feel natural to use across all devices."
     }
   ],
 
@@ -200,7 +198,7 @@ const CONFIG = {
   },
 
   // ---------------------------------------------------------------- footer
-  footerNote: "Designed and built from scratch. No templates.",
+  footerNote: "Built from scratch.",
 
   // ---------------------------------------------------------------- extras
   heroBadge: "Open to work",

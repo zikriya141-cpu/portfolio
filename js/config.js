@@ -1,5 +1,5 @@
-// ============================================================================
-//  PORTFOLIO CONFIG  —  apna saara content sirf yahan change karo.
+﻿// ============================================================================
+//  PORTFOLIO CONFIG  â€”  apna saara content sirf yahan change karo.
 //  Structure / layout nahi chhedna hai, sirf values badalni hain.
 // ============================================================================
 
@@ -7,7 +7,7 @@ const CONFIG = {
 
   // ---------------------------------------------------------------- basics
   name: "Zikriya Khan",
-  role: "Full-Stack Developer · AI / ML Engineer",
+  role: "Full-Stack Developer Â· AI / ML Engineer",
   location: "Jehangira, District Swabi, Pakistan",
   availability: "Open to new work",
   email: "zikriya141@gmail.com",
@@ -34,13 +34,13 @@ const CONFIG = {
   // Link to your CV / resume
   cvUrl: "assets/Zikriya-Khan-CV.pdf",
 
-  // Your GitHub username — used to build every "View on GitHub" link
+  // Your GitHub username â€” used to build every "View on GitHub" link
   // automatically from the "repo" field of each project below.
   github: "zikriya141-cpu",
 
   // ---------------------------------------------------------------- socials
   socials: [
-    { label: "GitHub",   icon: "⌥",  url: "https://github.com/zikriya141-cpu" },
+    { label: "GitHub",   icon: "âŒ¥",  url: "https://github.com/zikriya141-cpu" },
     { label: "LinkedIn", icon: "in", url: "https://www.linkedin.com/in/zikriya-khan-660086417/" },
     { label: "Email",    icon: "@",  url: "mailto:zikriya141@gmail.com" }
   ],
@@ -50,9 +50,9 @@ const CONFIG = {
     portrait: "assets/portrait.svg",
     heading: "A little about me",
     text: [
-      "I'm Zikriya — a builder who cares more about things actually working than overcomplicating them.",
+      "I'm Zikriya â€” a builder who cares more about things actually working than overcomplicating them.",
       "I like working where logic meets UI: building ML models, wiring them into clean web apps, and making sure they're easy to use. From prediction systems and traffic intelligence to medical imaging and Laravel marketplaces, I focus on shipping end-to-end projects.",
-      "Detail matters to me — structure, readability and getting the small things right."
+      "Detail matters to me â€” structure, readability and getting the small things right."
     ],
     stats: [
       { value: "5",   label: "Projects shipped" },
@@ -81,22 +81,22 @@ const CONFIG = {
   // ---------------------------------------------------------------- services
   services: [
     {
-      icon: "◐",
+      icon: "â—",
       title: "AI / ML Systems",
-      text: "Pragmatic models trained with the right approach — focused on accuracy, clarity and real use cases."
+      text: "Pragmatic models trained with the right approach â€” focused on accuracy, clarity and real use cases."
     },
     {
-      icon: "◇",
+      icon: "â—‡",
       title: "Full-Stack Web Apps",
       text: "End-to-end apps with clean structure, sensible auth, and solid database design."
     },
     {
-      icon: "△",
+      icon: "â–³",
       title: "APIs & Backends",
       text: "Simple, reliable REST APIs built to be easy to integrate and maintain."
     },
     {
-      icon: "◎",
+      icon: "â—Ž",
       title: "Front-End Interfaces",
       text: "Minimal, responsive interfaces that feel natural to use across all devices."
     }
@@ -133,7 +133,7 @@ const CONFIG = {
       summary:
         "A student-performance prediction and recommendation system. A tuned Random Forest classifies each student as Good, Average or At Risk, a second regressor estimates the exact final score, and a rule engine plus SHAP values explain exactly which factors pushed the result.",
       stack: ["Python", "Flask", "Scikit-learn", "SHAP", "SQLAlchemy", "Bootstrap 5", "Chart.js"],
-      metrics: ["81% test accuracy", "82.5% CV F1", "MAE 3.37 / R² 0.86", "17 pytest tests"],
+      metrics: ["81% test accuracy", "82.5% CV F1", "MAE 3.37 / RÂ² 0.86", "17 pytest tests"],
       repo: "EduPredict",
       accent: "#2dd4bf",
       wide: true
@@ -172,7 +172,7 @@ const CONFIG = {
       cover: "assets/works/portfolio.svg",
       gallery: ["assets/works/portfolio.svg"],
       summary:
-        "The site you are reading. A hand-built creative portfolio with a loading sequence, a filterable work grid, a keyboard-navigable lightbox, animated skill bars, a dark/light theme and a working contact form — no frameworks, no build step.",
+        "The site you are reading. A hand-built creative portfolio with a loading sequence, a filterable work grid, a keyboard-navigable lightbox, animated skill bars, a dark/light theme and a working contact form â€” no frameworks, no build step.",
       stack: ["HTML", "CSS", "JavaScript", "IntersectionObserver", "Netlify Forms"],
       metrics: ["No dependencies", "Single config file", "Lightbox + filters", "Light & dark theme"],
       repo: "portfolio",
@@ -184,14 +184,14 @@ const CONFIG = {
   process: [
     { step: "01", title: "Understand", text: "I dig into the actual problem, the data and the people who will use it before writing any code." },
     { step: "02", title: "Model",      text: "For ML work that means cleaning data, choosing features and validating the approach with real metrics." },
-    { step: "03", title: "Build",      text: "Clean, tested code — routes, models, views, auth, and the error states nobody wants to build." },
+    { step: "03", title: "Build",      text: "Clean, tested code â€” routes, models, views, auth, and the error states nobody wants to build." },
     { step: "04", title: "Ship",       text: "Deploy it, watch it in production, and fix what breaks. A project is not done until it runs." }
   ],
 
   // ---------------------------------------------------------------- contact
   contact: {
     heading: "Let's build something",
-    text: "Whether it is a full-stack application, an AI model, or a polished front-end — I am always up for a good problem. Drop a message and I will reply.",
+    text: "Whether it is a full-stack application, an AI model, or a polished front-end â€” I am always up for a good problem. Drop a message and I will reply.",
     // The form is a Netlify form (works on Netlify Drop). Elsewhere it
     // opens the visitor's mail app with the message pre-filled.
     formName: "portfolio-contact"
@@ -205,3 +205,4 @@ const CONFIG = {
   // Year is auto-detected, this is only a fallback
   year: "2026"
 };
+

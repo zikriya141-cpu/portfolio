@@ -31,8 +31,8 @@ const CONFIG = {
     "JavaScript"
   ],
 
-  // Link to your CV / resume (leave "" to hide the button)
-  cvUrl: "",
+  // Link to your CV / resume
+  cvUrl: "assets/Zikriya-Khan-CV.pdf",
 
   // Your GitHub username — used to build every "View on GitHub" link
   // automatically from the "repo" field of each project below.

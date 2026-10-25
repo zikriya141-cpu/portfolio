@@ -27,41 +27,13 @@ function setHTML(el, html) { if (el) el.innerHTML = html; }
   function apply(mode) {
     document.documentElement.setAttribute("data-theme", mode);
     const icon = $("themeIcon");
-    if (icon) icon.textContent = mode === "light" ? "â˜€" : "â˜¾";
+    if (icon) icon.innerHTML = mode === "light" ? "&#9728;" : "&#9790;";
   }
 
   $("themeBtn").addEventListener("click", () => {
     const next = document.documentElement.getAttribute("data-theme") === "light" ? "dark" : "light";
     try { localStorage.setItem("pf_theme", next); } catch (e) {}
     apply(next);
-  });
-})();
-
-/* ==========================================================================
-   CUSTOM CURSOR
-   ========================================================================== */
-(function cursor() {
-  if (matchMedia("(hover: none)").matches) return;
-  const ring = $("cursor"), dot = $("cursorDot");
-  let rx = 0, ry = 0, mx = 0, my = 0;
-
-  addEventListener("pointermove", e => {
-    mx = e.clientX; my = e.clientY;
-    document.body.classList.add("cursorOn");
-    dot.style.transform = `translate(${mx - 2.5}px, ${my - 2.5}px)`;
-  });
-  addEventListener("pointerleave", () => document.body.classList.remove("cursorOn"));
-
-  (function loop() {
-    rx += (mx - rx) * .16;
-    ry += (my - ry) * .16;
-    ring.style.transform = `translate(${rx - 17}px, ${ry - 17}px)`;
-    requestAnimationFrame(loop);
-  })();
-
-  document.addEventListener("pointerover", e => {
-    const t = e.target.closest("a, button, .work, .filter, [data-cursor='link']");
-    ring.classList.toggle("grow", !!t);
   });
 })();
 
@@ -83,31 +55,6 @@ function setHTML(el, html) { if (el) el.innerHTML = html; }
       document.body.classList.remove("menuOpen");
       document.body.style.overflow = "";
     }));
-})();
-
-/* ==========================================================================
-   LOADER
-   ========================================================================== */
-(function loader() {
-  const el = $("loader"), count = $("loaderCount"), fill = $("loaderFill");
-  let n = 0;
-  const timer = setInterval(() => {
-    n += Math.random() * 9 + 4;
-    if (n >= 100) n = 100;
-    count.textContent = Math.floor(n);
-    fill.style.width = n + "%";
-    if (n === 100) {
-      clearInterval(timer);
-      setTimeout(() => {
-        el.classList.add("done");
-        document.body.style.overflow = "";
-        startHero();
-        setTimeout(() => el.remove(), 900);
-      }, 450);
-    }
-  }, reduced ? 10 : 160);
-
-  document.body.style.overflow = "hidden";
 })();
 
 /* ==========================================================================
@@ -152,17 +99,15 @@ function startHero() {
    STATIC CONTENT
    ========================================================================== */
 (function fill() {
-  document.title = `${C.name} â€” Portfolio`;
-  setText($("loaderName"), C.name);
+  document.title = `${C.name} \u2014 Portfolio`;
   setText($("logoText"), C.name);
   setText($("heroAvail"), C.availability);
   setText($("heroLoc"), C.location);
   setText($("heroKicker"), C.role);
   setText($("heroTagline"), C.intro);
-  setText($("heroBadge"), C.heroBadge);
   setText($("footerName"), C.name);
   setText($("footerNote"), C.footerNote);
-  setText($("workSub"), "A few things I have designed, built and shipped.");
+  setText($("workSub"), C.workSub);
   setText($("contactHeading"), C.contact.heading);
   setText($("contactText"), C.contact.text);
   setText($("emailText"), C.email);
@@ -173,7 +118,7 @@ function startHero() {
   $("phoneLink").href = `tel:${String(C.phone).replace(/\s/g, "")}`;
   $("footerMail").href = `mailto:${C.email}`;
   $("footerMail").textContent = C.email;
-  $("footerBig").textContent = "Let's talk";
+  $("footerBig").textContent = C.footerHeading;
 
   const cvBtn = $("cvBtn");
   if (C.cvUrl) { 
@@ -205,17 +150,15 @@ function startHero() {
 
   /* ---- skills ---- */
   setHTML($("skills"), C.skills.map(s =>
-    `<div class="skillRow">
-       <div class="skillTop"><span>${esc(s.name)}</span><span>${s.level}%</span></div>
-       <div class="skillBar"><i data-level="${s.level}"></i></div>
+    `<div class="skillGroup">
+       <span class="skillGroupLabel">${esc(s.group)}</span>
+       <div class="skillChips">${s.items.map(t => `<span class="chip">${esc(t)}</span>`).join("")}</div>
      </div>`).join(""));
 
-  setHTML($("tools"), C.tools.map(t => `<span class="tool">${esc(t)}</span>`).join(""));
-
   /* ---- services ---- */
-  setHTML($("serviceGrid"), C.services.map(s =>
+  setHTML($("serviceGrid"), C.services.map((s, i) =>
     `<article class="service">
-       <span class="ico">${esc(s.icon)}</span>
+       <span class="ico">${String(i + 1).padStart(2, "0")}</span>
        <h3>${esc(s.title)}</h3>
        <p>${esc(s.text)}</p>
      </article>`).join(""));
@@ -231,13 +174,9 @@ function startHero() {
   /* ---- socials ---- */
   setHTML($("socials"), C.socials.map(s =>
     `<a class="social" href="${esc(s.url)}" target="_blank" rel="noopener"
-        title="${esc(s.label)}" aria-label="${esc(s.label)}" data-cursor="link">${esc(s.icon)}</a>`).join(""));
+        title="${esc(s.label)}" aria-label="${esc(s.label)}">${esc(s.icon)}</a>`).join(""));
 
-  /* ---- marquees ---- */
-  const mk = list => list.map(t => `<span>${esc(t)}</span>`).join("") ;
-  const strip = list => mk(list) + mk(list);
-  $("marqueeTop").innerHTML = strip(C.marquee);
-  $("marqueeBottom").innerHTML = strip(C.marquee.slice().reverse());
+  startHero();
 })();
 
 /* ==========================================================================
@@ -251,7 +190,7 @@ const workCards = [];
 
   C.works.forEach((w, i) => {
     const card = document.createElement("article");
-    const isWide = w.wide !== undefined ? w.wide : i % 3 === 0;
+    const isWide = w.wide === true;
     card.className = "work" + (isWide ? " wide" : "");
     card.style.transitionDelay = (i % 3) * 80 + "ms";
     const repoUrl = w.link || (w.repo && C.github ? `https://github.com/${C.github}/${w.repo}` : "");
@@ -269,11 +208,14 @@ const workCards = [];
         <span class="workIndex">${String(i + 1).padStart(2, "0")}</span>
         <div class="workMain">
           <h3>${esc(w.title)}</h3>
-          <span class="workMeta">${esc(w.category)} Â· ${esc(w.year)}</span>
+          <span class="workMeta">${esc(w.category)} &middot; ${esc(w.year)}</span>
+          ${w.note ? `<p class="workNote">${esc(w.note)}</p>` : ""}
+          ${w.stack?.length ? `<span class="workStack">${w.stack.map(esc).join(" &middot; ")}</span>` : ""}
         </div>
-        ${w.stack?.length ? `<div class="workStack">${w.stack.slice(0, 3).map(t => `<span>${esc(t)}</span>`).join("")}</div>` : ""}
-        ${repoUrl ? `<a class="workRepo" href="${esc(repoUrl)}" target="_blank" rel="noopener" data-cursor="link" aria-label="View ${esc(w.title)} on GitHub"><span class="wrLong">View on GitHub</span><span class="wrShort">GitHub</span> <span class="wrArrow">â†—</span></a>` : ""}
-        <span class="workArrow">â†—</span>
+        <div class="workAside">
+          ${repoUrl ? `<a class="workRepo" href="${esc(repoUrl)}" target="_blank" rel="noopener" aria-label="View ${esc(w.title)} on GitHub"><span class="wrLong">View on GitHub</span><span class="wrShort">GitHub</span> <span class="wrArrow">&nearr;</span></a>` : ""}
+          <span class="workArrow" aria-hidden="true">&nearr;</span>
+        </div>
       </div>`;
 
     const img = card.querySelector("img");
@@ -343,7 +285,7 @@ function showLightbox(workIndex, imgIndex) {
   const url = w.link || (w.repo && C.github ? `https://github.com/${C.github}/${w.repo}` : "");
   if (url) {
     link.href = url;
-    link.textContent = w.link && !w.repo ? "View project â†—" : "View on GitHub â†—";
+    link.textContent = w.link && !w.repo ? "View project \u2197" : "View on GitHub \u2197";
     link.style.display = "";
   } else {
     link.style.display = "none";
@@ -400,17 +342,6 @@ addEventListener("keydown", e => {
     el.style.transitionDelay = (i % 4) * 80 + "ms";
     io.observe(el);
   });
-
-  // skill bars fill when they come into view
-  const bars = document.querySelectorAll(".skillBar i");
-  const barIO = new IntersectionObserver(entries => {
-    entries.forEach(en => {
-      if (!en.isIntersecting) return;
-      en.target.style.width = en.target.dataset.level + "%";
-      barIO.unobserve(en.target);
-    });
-  }, { threshold: 0.4 });
-  bars.forEach(b => barIO.observe(b));
 })();
 
 /* ==========================================================================
@@ -457,13 +388,13 @@ $("contactForm").addEventListener("submit", async e => {
 
   if (sent) {
     status.className = "formStatus ok";
-    status.textContent = "Message sent â€” I will get back to you soon.";
+    status.textContent = "Message sent \u2014 I will get back to you soon.";
     e.target.reset();
   } else {
     // not on Netlify: open the visitor's mail app instead
     status.className = "formStatus ok";
     status.textContent = "Opening your mail app...";
-    location.href = `mailto:${C.email}?subject=${encodeURIComponent("Portfolio enquiry from " + name)}&body=${encodeURIComponent(message + "\n\nâ€” " + name + " (" + email + ")")}`;
+    location.href = `mailto:${C.email}?subject=${encodeURIComponent("Portfolio enquiry from " + name)}&body=${encodeURIComponent(message + "\n\n\u2014 " + name + " (" + email + ")")}`;
   }
 });
 

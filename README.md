@@ -1,29 +1,24 @@
 # Portfolio — Zikriya Khan
 
-A creative, hand-built portfolio website. **Plain HTML, CSS and JavaScript** —
-no framework, no build step, no `npm install`. Clone it and it runs.
+A hand-built portfolio. Plain HTML, CSS and JavaScript: no framework, no build
+step, no dependencies. Clone it and it runs.
 
-🔗 **Live site:** deploy karo — [app.netlify.com/drop](https://app.netlify.com/drop) par is folder ko drag karo.
-
----
-
-## ✨ Features
-
-- **Loading sequence** with an animated counter
-- **Hero reveal** — the name types in with a staggered slide-up
-- **Custom cursor** that grows over interactive elements (desktop)
-- **Filterable work grid** — categories are generated automatically from the projects
-- **Lightbox** with gallery navigation, arrow keys and `Esc` to close
-- **Animated skill bars** that fill when they scroll into view
-- **Light / dark theme** toggle, saved in the browser
-- **Scroll-reveal animations** via `IntersectionObserver`
-- **Working contact form** (Netlify Forms, with a `mailto:` fallback)
-- **Fully responsive** down to mobile, with a slide-in menu
-- **Respects `prefers-reduced-motion`**
+**Live:** <https://zikriya141-cpu.github.io/portfolio/>
 
 ---
 
-## 🚀 Run it locally
+## What's in it
+
+- Filterable project grid, generated from a single config file
+- Lightbox with gallery navigation, arrow keys and `Esc`
+- Light / dark theme, remembered in the browser
+- Scroll reveals via `IntersectionObserver`, disabled under `prefers-reduced-motion`
+- Contact form (Netlify Forms, with a `mailto:` fallback)
+- Responsive down to 320px, with a slide-in menu on phones
+
+---
+
+## Run it locally
 
 ```bash
 # option 1 — double click start.bat (Windows)
@@ -36,42 +31,44 @@ Then open <http://localhost:8000>.
 
 ---
 
-## 📁 Structure
+## Structure
 
 ```
 portfolio/
-├── index.html        # markup only — never edit for content
+├── index.html        # markup only — content comes from config.js
 ├── css/style.css     # colours + fonts live in :root at the top
-├── js/config.js      # ⭐ ALL your content lives here
-├── js/main.js        # rendering + animation logic
+├── js/config.js      # ALL the text and project data lives here
+├── js/main.js        # rendering + interaction
 ├── assets/
-│   ├── works/        # project cover images
-│   └── portrait.svg  # your photo
+│   ├── works/        # project cover art
+│   ├── portrait.svg  # monogram card
+│   └── Zikriya-Khan-CV.pdf
 └── start.bat         # one-click local server
 ```
 
 ---
 
-## ✏️ Editing
+## Editing
 
-Everything you will ever need to change is in **`js/config.js`** — one plain
-object. Change the values, save, refresh. The grid, filters, lightbox, skills
-and contact form all rebuild themselves from it.
+Everything you would want to change is in `js/config.js`. Change a value, save,
+refresh. The grid, filters, lightbox, stack list and contact form rebuild
+themselves from it.
 
 ```js
 const CONFIG = {
   name: "Zikriya Khan",
-  role: "Full-Stack Developer · AI / ML Engineer",
-  github: "zikriya141-cpu",       // used to build the "View on GitHub" links
+  role: "Full-stack developer · ML",
+  github: "zikriya141-cpu",     // builds the "View on GitHub" links
   email: "zikriya141@gmail.com",
   socials: [{ label, icon, url }],
-  skills: [{ name, level }],
+  skills: [{ group, items: [...] }],
   works: [{
     title, category, year,
     cover, gallery: [...],
-    summary, stack: [...], metrics: [...],
-    repo: "RepoName",          // -> github.com/<github>/<repo>
-    accent: "#2dd4bf"
+    summary, note, stack: [...], metrics: [...],
+    repo: "RepoName",           // -> github.com/<github>/<repo>
+    accent: "#2dd4bf",
+    wide: true                  // full-width card
   }],
   services: [...],
   process: [...],
@@ -81,35 +78,25 @@ const CONFIG = {
 
 ### Adding a project
 
-Append one object to the `works` array. Drop the image in `assets/works/`,
-set `cover`, list extra shots in `gallery`, and you are done — the filter
-button, the card, the lightbox and the GitHub link all appear on their own.
+Append one object to `works`. Drop the cover in `assets/works/`, set `cover`,
+list extra shots in `gallery`. The filter button, card, lightbox and GitHub
+link all appear on their own.
 
-### Changing the colours or fonts
+### Changing colours or fonts
 
-`css/style.css` → the `:root` block at the very top. One place, twelve
-variables, both themes.
-
----
-
-## 🚀 Deploy
-
-**Netlify Drop** (30 seconds): drag the folder onto
-[app.netlify.com/drop](https://app.netlify.com/drop).
-
-**Netlify from GitHub:** connect the repo, build command `leave empty`,
-publish directory `.`.
-
-**GitHub Pages:** push to a repo, then *Settings → Pages → deploy from branch*.
+`css/style.css`, `:root` block at the very top. One place, both themes.
 
 ---
 
-## 🛠 Built with
+## Deploy
 
-HTML5 · CSS3 (custom properties, grid, flexbox) · Vanilla JavaScript ·
-IntersectionObserver · Canvas-free CSS animation · Netlify Forms
+The site is static, so any host works.
 
-No dependencies. No build. Nothing to install.
+- **GitHub Pages** (current): Settings → Pages → deploy from branch `main`, root.
+- **Netlify Drop**: drag the folder onto <https://app.netlify.com/drop>.
+  Use this if you want the contact form to actually send mail.
+- **Netlify from GitHub**: connect the repo, leave the build command empty,
+  publish directory `.`.
 
 ---
 

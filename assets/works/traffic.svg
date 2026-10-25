@@ -1,51 +1,73 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000">
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#0c0c11"/>
-      <stop offset="1" stop-color="#12121a"/>
+      <stop offset="0" stop-color="#161207"/>
+      <stop offset="1" stop-color="#0a0a0c"/>
     </linearGradient>
-    <radialGradient id="gl" cx="0.82" cy="0.12" r="0.85">
-      <stop offset="0" stop-color="#fbbf24" stop-opacity="0.30"/>
+    <radialGradient id="glow" cx="0.62" cy="0.5" r="0.62">
+      <stop offset="0" stop-color="#fbbf24" stop-opacity="0.14"/>
       <stop offset="1" stop-color="#fbbf24" stop-opacity="0"/>
     </radialGradient>
-    <filter id="nz"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="3"/></filter>
+    <radialGradient id="green">
+      <stop offset="0" stop-color="#4ade80" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#4ade80" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="50" height="50" patternUnits="userSpaceOnUse">
+      <path d="M50 0H0V50" fill="none" stroke="#ffffff" stroke-opacity="0.03"/>
+    </pattern>
+    <filter id="nz"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2"/></filter>
   </defs>
+
   <rect width="1600" height="1000" fill="url(#bg)"/>
-  <rect width="1600" height="1000" fill="url(#gl)"/>
-  
-    <g opacity="0.9">
-      <path d="M1180 -40 L1580 -40 L1260 720 L1060 720 Z" fill="#fbbf24" fill-opacity="0.05"/>
-      <g stroke="#fbbf24" stroke-opacity="0.5" stroke-width="4" stroke-linecap="round">
-        <line x1="1400" y1="60" x2="1330" y2="220"/>
-        <line x1="1310" y1="300" x2="1255" y2="430"/>
-        <line x1="1235" y1="510" x2="1190" y2="640"/>
-      </g>
-      <g stroke="#ffffff" stroke-opacity="0.10" stroke-width="2">
-        <line x1="1210" y1="40" x2="1120" y2="700"/>
-        <line x1="1350" y1="40" x2="1200" y2="700"/>
-        <line x1="1470" y1="40" x2="1300" y2="700"/>
-      </g>
-    </g>
-    <g transform="translate(760,300)">
-      <rect x="-70" y="-160" width="140" height="320" rx="34" fill="#0c0c11" stroke="#fbbf24" stroke-opacity="0.6" stroke-width="3"/>
-      <circle cx="0" cy="-96" r="32" fill="#ef4444" fill-opacity="0.85"/>
-      <circle cx="0" cy="0" r="32" fill="#fbbf24" fill-opacity="0.9"/>
-      <circle cx="0" cy="96" r="32" fill="#22c55e" fill-opacity="0.5"/>
-      <rect x="-10" y="160" width="20" height="120" rx="8" fill="#fbbf24" fill-opacity="0.35"/>
-    </g>
-    <g stroke="#fbbf24" stroke-width="2.5" fill="none" stroke-opacity="0.7">
-      <path d="M420 520 q120 -160 260 -80 q130 74 250 -20"/>
-    </g>
-    <g fill="#fbbf24">
-      <circle cx="420" cy="520" r="9"/><circle cx="680" cy="440" r="9"/><circle cx="930" cy="420" r="9"/>
-    </g>
-    <text x="420" y="600" font-family="'Segoe UI',sans-serif" font-size="22" fill="#ffffff" fill-opacity="0.45" letter-spacing="4">PREDICT</text>
-    <text x="680" y="520" font-family="'Segoe UI',sans-serif" font-size="22" fill="#ffffff" fill-opacity="0.45" letter-spacing="4">DETECT</text>
-    <text x="930" y="500" font-family="'Segoe UI',sans-serif" font-size="22" fill="#ffffff" fill-opacity="0.45" letter-spacing="4">CONTROL</text>
-  <rect width="1600" height="1000" filter="url(#nz)" opacity="0.045"/>
-  <g font-family="'Segoe UI', Helvetica, Arial, sans-serif">
-    <text x="72" y="852" font-family="Georgia, serif" font-style="italic" font-size="62" fill="#ffffff" fill-opacity="0.94">Traffic Intelligence</text>
-    <text x="76" y="912" font-size="23" letter-spacing="6" fill="#fbbf24" fill-opacity="0.95">DEEP LEARNING · YOLOV8 · FASTAPI</text>
-    <text x="1524" y="120" text-anchor="end" font-size="150" font-weight="700" fill="#ffffff" fill-opacity="0.06">03</text>
+  <rect width="1600" height="1000" fill="url(#glow)"/>
+  <rect width="1600" height="1000" fill="url(#grid)"/>
+
+  <g stroke="#ffffff" stroke-opacity="0.14" stroke-width="3">
+    <line x1="240" y1="360" x2="1400" y2="360"/>
+    <line x1="240" y1="500" x2="1400" y2="500"/>
+    <line x1="240" y1="640" x2="1400" y2="640"/>
+    <line x1="240" y1="780" x2="1400" y2="780"/>
   </g>
+
+  <g stroke="#fbbf24" stroke-opacity="0.35" stroke-width="2" stroke-dasharray="26 26">
+    <line x1="240" y1="430" x2="1400" y2="430"/>
+    <line x1="240" y1="570" x2="1400" y2="570"/>
+    <line x1="240" y1="710" x2="1400" y2="710"/>
+  </g>
+
+  <g>
+    <rect x="250" y="300" width="96" height="250" rx="48" fill="#121216" stroke="#ffffff" stroke-opacity="0.12"/>
+    <circle cx="298" cy="360" r="21" fill="#ef4444" fill-opacity="0.18"/>
+    <circle cx="298" cy="425" r="21" fill="#fbbf24" fill-opacity="0.18"/>
+    <circle cx="298" cy="490" r="34" fill="url(#green)"/>
+    <circle cx="298" cy="490" r="21" fill="#4ade80"/>
+  </g>
+
+  <g fill="#fbbf24" fill-opacity="0.9">
+    <rect x="640" y="392" width="150" height="64" rx="16"/>
+    <rect x="1010" y="392" width="120" height="64" rx="16" fill-opacity="0.55"/>
+    <rect x="760" y="532" width="170" height="64" rx="16"/>
+    <rect x="1110" y="532" width="130" height="64" rx="16" fill-opacity="0.5"/>
+    <rect x="620" y="672" width="140" height="64" rx="16" fill-opacity="0.55"/>
+    <rect x="930" y="672" width="160" height="64" rx="16"/>
+  </g>
+  <g fill="#0a0a0c" fill-opacity="0.35">
+    <rect x="700" y="404" width="46" height="40" rx="8"/>
+    <rect x="820" y="544" width="52" height="40" rx="8"/>
+    <rect x="990" y="684" width="48" height="40" rx="8"/>
+  </g>
+
+  <g stroke="#4ade80" stroke-opacity="0.45" stroke-width="3" fill="none">
+    <path d="M1420 360 h60"/>
+    <path d="M1480 360 l-16 -10"/>
+    <path d="M1480 360 l-16 10"/>
+  </g>
+
+  <g font-family="'Segoe UI', Arial, sans-serif">
+    <text x="72" y="852" font-family="Georgia, serif" font-style="italic" font-size="56" fill="#ffffff" fill-opacity="0.95">Traffic Intelligence</text>
+    <text x="76" y="904" font-size="18" letter-spacing="5" fill="#fbbf24">FORECASTING · COMPUTER VISION</text>
+    <text x="1524" y="200" text-anchor="end" font-size="150" font-weight="700" fill="#ffffff" fill-opacity="0.05">03</text>
+  </g>
+
+  <rect width="1600" height="1000" filter="url(#nz)" opacity="0.045"/>
 </svg>

@@ -1,46 +1,32 @@
 ﻿// ============================================================================
-//  PORTFOLIO CONFIG  â€”  apna saara content sirf yahan change karo.
-//  Structure / layout nahi chhedna hai, sirf values badalni hain.
+//  PORTFOLIO CONFIG
+//  All the text lives here. Change values, leave the structure alone.
 // ============================================================================
 
 const CONFIG = {
 
   // ---------------------------------------------------------------- basics
   name: "Zikriya Khan",
-  role: "Full-Stack Developer Â· AI / ML Engineer",
-  location: "Jehangira, District Swabi, Pakistan",
-  availability: "Open to new work",
+  role: "Full-stack developer · ML",
+  location: "Jehangira, Swabi, Pakistan",
+  availability: "Open to internships and freelance work",
   email: "zikriya141@gmail.com",
   phone: "+92 333 8802939",
 
-  tagline:
-    "I build practical things at the intersection of AI and the web.",
-
   intro:
-    "Final-year Computer Science student focused on AI, Machine Learning and full-stack development. " +
-    "I enjoy turning real problems into clean, working solutions from idea to deployment.",
-
-  marquee: [
-    "Python",
-    "Flask",
-    "FastAPI",
-    "Laravel",
-    "Machine Learning",
-    "Deep Learning",
-    "Tailwind CSS",
-    "JavaScript"
-  ],
+    "I build ML models, the web apps around them, and the interfaces that make them usable. " +
+    "Final-year CS student in Swabi, Pakistan.",
 
   // Link to your CV / resume
   cvUrl: "assets/Zikriya-Khan-CV.pdf",
 
-  // Your GitHub username â€” used to build every "View on GitHub" link
-  // automatically from the "repo" field of each project below.
+  // Your GitHub username. Used to build the "View on GitHub" links
+  // from the "repo" field of each project below.
   github: "zikriya141-cpu",
 
   // ---------------------------------------------------------------- socials
   socials: [
-    { label: "GitHub",   icon: "âŒ¥",  url: "https://github.com/zikriya141-cpu" },
+    { label: "GitHub",   icon: "GH", url: "https://github.com/zikriya141-cpu" },
     { label: "LinkedIn", icon: "in", url: "https://www.linkedin.com/in/zikriya-khan-660086417/" },
     { label: "Email",    icon: "@",  url: "mailto:zikriya141@gmail.com" }
   ],
@@ -48,63 +34,53 @@ const CONFIG = {
   // ---------------------------------------------------------------- about
   about: {
     portrait: "assets/portrait.svg",
-    heading: "A little about me",
+    heading: "About me",
     text: [
-      "I'm Zikriya â€” a builder who cares more about things actually working than overcomplicating them.",
-      "I like working where logic meets UI: building ML models, wiring them into clean web apps, and making sure they're easy to use. From prediction systems and traffic intelligence to medical imaging and Laravel marketplaces, I focus on shipping end-to-end projects.",
-      "Detail matters to me â€” structure, readability and getting the small things right."
+      "I’m Zikriya. I’m in my final year of a Computer Science degree, and most of what I build starts with a small annoyance or a question I can’t answer.",
+      "The X-ray project came from wanting to know if a model could flag pneumonia without hiding how it got there. EduPredict came from watching students get one number at the end of a term and no explanation. The traffic project was an excuse to work with video and forecasting in the same place.",
+      "I work mostly in Python and JavaScript. On the ML side that means PyTorch, scikit-learn, and more time cleaning data than training models. On the web side it’s Flask, FastAPI or Laravel, with plain HTML and CSS when a framework would be overkill.",
+      "I’m still early in this. I’d rather ship something small that works, then improve it, than plan a perfect system I never finish."
     ],
     stats: [
-      { value: "5",   label: "Projects shipped" },
-      { value: "81%", label: "Model test accuracy" },
-      { value: "17",  label: "Automated tests" },
-      { value: "3",   label: "Stacks in production" }
+      { value: "5",    label: "Projects built" },
+      { value: "81%",  label: "Best model accuracy" },
+      { value: "17",   label: "Tests on EduPredict" },
+      { value: "2026", label: "Graduating" }
     ]
   },
 
-  // ---------------------------------------------------------------- skills
+  // ---------------------------------------------------------------- stack
+  // Grouped by what I actually reach for. No percentage bars.
   skills: [
-    { name: "Python",           level: 92 },
-    { name: "Machine Learning", level: 86 },
-    { name: "Laravel / PHP",    level: 84 },
-    { name: "JavaScript",       level: 78 },
-    { name: "HTML & CSS",       level: 90 },
-    { name: "Deep Learning",    level: 74 }
-  ],
-
-  tools: [
-    "Python", "Flask", "FastAPI", "PyTorch", "Scikit-learn", "SHAP", "Streamlit",
-    "Laravel", "PHP", "Blade", "MySQL", "SQLite", "JavaScript",
-    "Tailwind CSS", "Bootstrap 5", "Chart.js", "Vite", "Git", "Netlify"
+    { group: "ML",       items: ["Python", "PyTorch", "scikit-learn", "SHAP", "pandas"] },
+    { group: "Backend",  items: ["Flask", "FastAPI", "Laravel", "MySQL", "SQLite"] },
+    { group: "Frontend", items: ["JavaScript", "HTML & CSS", "Tailwind", "Chart.js"] },
+    { group: "Tools",    items: ["Git", "Vite", "Streamlit", "Netlify"] }
   ],
 
   // ---------------------------------------------------------------- services
   services: [
     {
-      icon: "â—",
-      title: "AI / ML Systems",
-      text: "Pragmatic models trained with the right approach â€” focused on accuracy, clarity and real use cases."
+      title: "ML prototypes",
+      text: "A model trained on your data, wrapped in a small app you can actually try. You also get a plain note on what it can and cannot do."
     },
     {
-      icon: "â—‡",
-      title: "Full-Stack Web Apps",
-      text: "End-to-end apps with clean structure, sensible auth, and solid database design."
+      title: "Flask / FastAPI backends",
+      text: "APIs and small services with a sensible structure, auth where it’s needed, and tests around the parts that would hurt to break."
     },
     {
-      icon: "â–³",
-      title: "APIs & Backends",
-      text: "Simple, reliable REST APIs built to be easy to integrate and maintain."
+      title: "Laravel web apps",
+      text: "Multi-role apps with real database design: customers, staff, admins, and the boring screens that hold everything together."
     },
     {
-      icon: "â—Ž",
-      title: "Front-End Interfaces",
-      text: "Minimal, responsive interfaces that feel natural to use across all devices."
+      title: "Front-end build-outs",
+      text: "Turning a design into responsive HTML, CSS and JavaScript. No framework if the project doesn’t need one."
     }
   ],
 
   // ---------------------------------------------------------------- work
-  // Filters are auto-generated from the "category" field.
-  // Images live in assets/works/ (the .svg covers are generated placeholders).
+  // Filters are generated from the "category" field.
+  // Covers live in assets/works/.
   works: [
     {
       title: "AI X-Ray Assistant",
@@ -113,9 +89,10 @@ const CONFIG = {
       cover: "assets/works/xray.svg",
       gallery: ["assets/works/xray.svg"],
       summary:
-        "A chest X-ray pneumonia screening assistant built as a Final Year Project. Two DenseNet121 models handle pediatric (Normal / Bacterial / Viral) and adult (Normal / Pneumonia) scans, Grad-CAM heatmaps show what the model looked at, and the Streamlit app supports batch screening and PDF reports. Built on an open-source base by Muhammad Saad Khan.",
-      stack: ["Python", "PyTorch", "DenseNet121", "Streamlit", "Grad-CAM", "TorchXRayVision"],
-      metrics: ["~87% test accuracy", "98.6% sensitivity", "Dual pediatric + adult models", "Grad-CAM explainability"],
+        "A chest X-ray screening tool built as my final year project. Two DenseNet121 models handle pediatric and adult scans, Grad-CAM shows what the model looked at, and the Streamlit app supports batch screening and PDF reports. Started from an open-source base by Muhammad Saad Khan.",
+      note: "Two models, one screening flow, and Grad-CAM so the prediction can be checked.",
+      stack: ["Python", "PyTorch", "DenseNet121", "Streamlit", "Grad-CAM"],
+      metrics: ["~87% test accuracy", "98.6% sensitivity", "Pediatric + adult models", "Grad-CAM heatmaps"],
       repo: "chest-xray-analysis",
       accent: "#38bdf8",
       wide: true
@@ -131,37 +108,40 @@ const CONFIG = {
         "assets/works/edupredict-scatter.png"
       ],
       summary:
-        "A student-performance prediction and recommendation system. A tuned Random Forest classifies each student as Good, Average or At Risk, a second regressor estimates the exact final score, and a rule engine plus SHAP values explain exactly which factors pushed the result.",
-      stack: ["Python", "Flask", "Scikit-learn", "SHAP", "SQLAlchemy", "Bootstrap 5", "Chart.js"],
-      metrics: ["81% test accuracy", "82.5% CV F1", "MAE 3.37 / RÂ² 0.86", "17 pytest tests"],
+        "A student performance predictor that also explains itself. A Random Forest sorts students into Good, Average or At Risk, a second model estimates the final score, and SHAP values show which factors pushed the result.",
+      note: "Predicts the score, then shows which factors moved it.",
+      stack: ["Python", "Flask", "scikit-learn", "SHAP", "SQLAlchemy"],
+      metrics: ["81% test accuracy", "82.5% CV F1", "MAE 3.37 / R² 0.86", "17 pytest tests"],
       repo: "EduPredict",
       accent: "#2dd4bf",
       wide: true
     },
     {
-      title: "Traffic Intelligence & Congestion Control",
+      title: "Traffic Intelligence",
       category: "AI / ML",
       year: "2026",
       cover: "assets/works/traffic.svg",
       gallery: ["assets/works/traffic.svg", "assets/works/traffic-logo.png"],
       summary:
-        "A research-grade traffic system: Bi-LSTM with multi-head self-attention forecasts lane-level congestion, YOLOv8 counts vehicles per lane from a live camera, and a proportional controller allocates green time per lane. Exported to ONNX for fast inference.",
-      stack: ["Python", "PyTorch", "YOLOv8", "FastAPI", "ONNX", "Tailwind CSS"],
-      metrics: ["Lane-level forecasting", "Bi-LSTM + attention", "ONNX inference", "Render blueprint"],
+        "A traffic system built around one question: can you forecast congestion early enough to do something about it? A Bi-LSTM with attention forecasts lane-level congestion, YOLOv8 counts vehicles from a live feed, and a simple controller splits green time between lanes.",
+      note: "Forecasts congestion, counts cars, and gives lanes green time.",
+      stack: ["Python", "PyTorch", "YOLOv8", "FastAPI", "ONNX"],
+      metrics: ["Lane-level forecasting", "Bi-LSTM + attention", "ONNX inference", "Render deploy"],
       repo: "AI-Traffic-Intelligence-and-Congestion-Predictor",
       accent: "#fbbf24",
       wide: true
     },
     {
       title: "EcoScrap",
-      category: "Web App",
+      category: "Web",
       year: "2026",
       cover: "assets/works/ecoscrap.svg",
       gallery: ["assets/works/ecoscrap.svg"],
       summary:
-        "A scrap-recycling marketplace built on Laravel 13 with a three-tier role system. Customers browse categories, add items to a cart, place orders and track delivery, while agents manage pickups and admins control categories, sub-admins and bookings.",
-      stack: ["Laravel 13", "PHP", "Blade", "MySQL", "Tailwind CSS 4", "Vite"],
-      metrics: ["3 role tiers", "12 DB migrations", "Full CRUD admin", "Order tracking"],
+        "A scrap recycling marketplace built on Laravel. Customers browse and order, agents manage pickups, and admins control categories and bookings. Three roles, one database, a lot of edge cases.",
+      note: "Customers, agents and admins. The unglamorous parts are the point.",
+      stack: ["Laravel", "PHP", "Blade", "MySQL", "Tailwind"],
+      metrics: ["3 role tiers", "12 migrations", "Full CRUD admin", "Order tracking"],
       repo: "Ecoscrap",
       accent: "#4ade80"
     },
@@ -172,9 +152,10 @@ const CONFIG = {
       cover: "assets/works/portfolio.svg",
       gallery: ["assets/works/portfolio.svg"],
       summary:
-        "The site you are reading. A hand-built creative portfolio with a loading sequence, a filterable work grid, a keyboard-navigable lightbox, animated skill bars, a dark/light theme and a working contact form â€” no frameworks, no build step.",
-      stack: ["HTML", "CSS", "JavaScript", "IntersectionObserver", "Netlify Forms"],
-      metrics: ["No dependencies", "Single config file", "Lightbox + filters", "Light & dark theme"],
+        "The page you’re on. Hand-written HTML, CSS and JavaScript with a single config file for the content. No framework, no build step, no dependencies.",
+      note: "Hand-written, no framework, one config file.",
+      stack: ["HTML", "CSS", "JavaScript", "Netlify Forms"],
+      metrics: ["No dependencies", "Single config file", "Light & dark", "Keyboard lightbox"],
       repo: "portfolio",
       accent: "#818cf8"
     }
@@ -182,27 +163,25 @@ const CONFIG = {
 
   // ---------------------------------------------------------------- process
   process: [
-    { step: "01", title: "Understand", text: "I dig into the actual problem, the data and the people who will use it before writing any code." },
-    { step: "02", title: "Model",      text: "For ML work that means cleaning data, choosing features and validating the approach with real metrics." },
-    { step: "03", title: "Build",      text: "Clean, tested code â€” routes, models, views, auth, and the error states nobody wants to build." },
-    { step: "04", title: "Ship",       text: "Deploy it, watch it in production, and fix what breaks. A project is not done until it runs." }
+    { step: "01", title: "Understand", text: "I ask questions until the problem is clear. If the data isn’t there or the scope is wrong, I’ll say so before writing code." },
+    { step: "02", title: "Sketch",     text: "A short plan: what the first version does, what it deliberately doesn’t do, and how we’ll know it works." },
+    { step: "03", title: "Build",      text: "Small commits, readable code, and tests around the parts that would hurt to break." },
+    { step: "04", title: "Hand over",  text: "A running deploy, a short README, and a walkthrough. You should be able to run it without me." }
   ],
 
   // ---------------------------------------------------------------- contact
   contact: {
-    heading: "Let's build something",
-    text: "Whether it is a full-stack application, an AI model, or a polished front-end â€” I am always up for a good problem. Drop a message and I will reply.",
-    // The form is a Netlify form (works on Netlify Drop). Elsewhere it
-    // opens the visitor's mail app with the message pre-filled.
+    heading: "Say hello",
+    text: "Have a project, an internship, or a question? Email me directly. I read everything and usually reply within a day or two.",
+    // The form is a Netlify form. Elsewhere it opens the visitor’s mail app.
     formName: "portfolio-contact"
   },
 
-  // ---------------------------------------------------------------- footer
-  footerNote: "Built from scratch.",
+  // ---------------------------------------------------------------- section copy
+  workSub: "Five projects, from a chest X-ray screener to this page.",
+  footerHeading: "Get in touch",
+  footerNote: "Hand-written HTML, CSS and JS.",
 
-  // ---------------------------------------------------------------- extras
-  heroBadge: "Open to work",
-  // Year is auto-detected, this is only a fallback
+  // Year is detected automatically; this is only a fallback
   year: "2026"
 };
-

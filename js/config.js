@@ -158,6 +158,21 @@ const CONFIG = {
       metrics: ["No dependencies", "Single config file", "Light & dark", "Keyboard lightbox"],
       repo: "portfolio",
       accent: "#818cf8"
+    },
+    {
+      title: "TaskFlow",
+      category: "Web",
+      year: "2026",
+      cover: "assets/works/taskflow.svg",
+      gallery: ["assets/works/taskflow.svg"],
+      summary:
+        "A task manager that keeps its data. An Express API sits on top of SQLite, and a plain-JavaScript front end does the rest: create, edit, toggle between pending and completed, delete. Built in the first week of a remote internship as a full working flow rather than a demo, then put through a 12-point test checklist.",
+      note: "Create, edit, toggle, delete — and it survives a refresh.",
+      stack: ["Node.js", "Express", "SQLite", "JavaScript", "REST API"],
+      metrics: ["4 REST endpoints", "SQLite persistence", "12-point test checklist", "Server-side validation"],
+      repo: "taskflow",
+      accent: "#f472b6",
+      wide: true
     }
   ],
 
@@ -178,7 +193,7 @@ const CONFIG = {
   },
 
   // ---------------------------------------------------------------- section copy
-  workSub: "Five projects, from a chest X-ray screener to this page.",
+  workSub: "Six projects, from a chest X-ray screener to this page.",
   footerHeading: "Get in touch",
   footerNote: "Hand-written HTML, CSS and JS.",
 

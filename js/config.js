@@ -1,4 +1,4 @@
-﻿// ============================================================================
+// ============================================================================
 //  PORTFOLIO CONFIG
 //  All the text lives here. Change values, leave the structure alone.
 // ============================================================================
@@ -173,6 +173,21 @@ const CONFIG = {
       repo: "taskflow",
       accent: "#f472b6",
       wide: true
+    },
+    {
+      title: "LearnTrack",
+      category: "Web",
+      year: "2026",
+      cover: "assets/works/learntrack.svg",
+      gallery: ["assets/works/learntrack.svg"],
+      summary:
+        "A learning platform for small tuition centres. Instructors publish a course with lesson text and multiple-choice questions; students read the lesson, sit the quiz and see their attempt history. Answers are scored on the server against the stored key, so a tampered browser cannot fake a result. Passwords are hashed with bcrypt, and foreign keys tie users, courses, questions and attempts together.",
+      note: "Courses, quizzes and attempts — scored on the server, not in the browser.",
+      stack: ["Node.js", "Express", "SQLite", "bcryptjs", "JavaScript"],
+      metrics: ["8 REST endpoints", "Server-side scoring", "4 linked tables", "Student + instructor roles"],
+      repo: "learntrack",
+      accent: "#c084fc",
+      wide: true
     }
   ],
 
@@ -193,7 +208,7 @@ const CONFIG = {
   },
 
   // ---------------------------------------------------------------- section copy
-  workSub: "Six projects, from a chest X-ray screener to this page.",
+  workSub: "Seven projects, from a chest X-ray screener to this page.",
   footerHeading: "Get in touch",
   footerNote: "Hand-written HTML, CSS and JS.",
 

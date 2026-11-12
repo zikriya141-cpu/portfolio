@@ -42,7 +42,7 @@ const CONFIG = {
       "I’m still early in this. I’d rather ship something small that works, then improve it, than plan a perfect system I never finish."
     ],
     stats: [
-      { value: "5",    label: "Projects built" },
+      { value: "8",    label: "Projects built" },
       { value: "81%",  label: "Best model accuracy" },
       { value: "17",   label: "Tests on EduPredict" },
       { value: "2026", label: "Graduating" }
@@ -188,6 +188,21 @@ const CONFIG = {
       repo: "learntrack",
       accent: "#c084fc",
       wide: true
+    },
+    {
+      title: "OrderFlow",
+      category: "Web",
+      year: "2026",
+      cover: "assets/works/orderflow.svg",
+      gallery: ["assets/works/orderflow.svg"],
+      summary:
+        "A hardware storefront and an admin order desk in one Express app. Customers browse live stock, build a cart and check out; the server re-checks every quantity and prices the order from SQLite, ignoring whatever the browser sent. Admins move orders through a fixed lifecycle — Pending to Confirmed to Fulfilled, or Cancelled — and cancelling puts the stock back.",
+      note: "Stock and totals are settled on the server, not in the browser.",
+      stack: ["Node.js", "Express", "node:sqlite", "JavaScript", "REST API"],
+      metrics: ["5 REST endpoints", "3 linked tables", "4 API tests", "Stock restored on cancel"],
+      repo: "orderflow",
+      accent: "#f97316",
+      wide: true
     }
   ],
 
@@ -208,7 +223,7 @@ const CONFIG = {
   },
 
   // ---------------------------------------------------------------- section copy
-  workSub: "Seven projects, from a chest X-ray screener to this page.",
+  workSub: "Eight projects, from a chest X-ray screener to this page.",
   footerHeading: "Get in touch",
   footerNote: "Hand-written HTML, CSS and JS.",
 

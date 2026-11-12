@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1a0f08"/>
+      <stop offset="1" stop-color="#0a0a0c"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.45" r="0.62">
+      <stop offset="0" stop-color="#f97316" stop-opacity="0.13"/>
+      <stop offset="1" stop-color="#f97316" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="50" height="50" patternUnits="userSpaceOnUse">
+      <path d="M50 0H0V50" fill="none" stroke="#ffffff" stroke-opacity="0.03"/>
+    </pattern>
+    <filter id="nz"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2"/></filter>
+  </defs>
+
+  <rect width="1600" height="1000" fill="url(#bg)"/>
+  <rect width="1600" height="1000" fill="url(#glow)"/>
+  <rect width="1600" height="1000" fill="url(#grid)"/>
+
+  <circle cx="800" cy="420" r="372" fill="none" stroke="#f97316" stroke-opacity="0.07" stroke-width="2"/>
+
+  <!-- order card -->
+  <g>
+    <rect x="430" y="170" width="740" height="360" rx="26" fill="#ffffff" fill-opacity="0.04" stroke="#ffffff" stroke-opacity="0.08"/>
+    <line x1="430" y1="170" x2="430" y2="530" stroke="#f97316" stroke-opacity="0.7" stroke-width="5" stroke-linecap="round"/>
+
+    <!-- header -->
+    <text x="478" y="222" font-family="'Segoe UI', Arial, sans-serif" font-size="19" letter-spacing="3" fill="#ffffff" fill-opacity="0.5">ORD-748213</text>
+    <rect x="1010" y="198" width="118" height="36" rx="18" fill="#f97316" fill-opacity="0.12" stroke="#f97316" stroke-opacity="0.35"/>
+    <text x="1069" y="222" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="12" letter-spacing="2" fill="#f97316" fill-opacity="0.9">PENDING</text>
+    <line x1="478" y1="252" x2="1122" y2="252" stroke="#ffffff" stroke-opacity="0.07"/>
+
+    <!-- line items -->
+    <rect x="478" y="274" width="644" height="42" rx="12" fill="#ffffff" fill-opacity="0.05"/>
+    <rect x="492" y="284" width="22" height="22" rx="7" fill="#f97316" fill-opacity="0.2"/>
+    <rect x="532" y="288" width="268" height="13" rx="6.5" fill="#ffffff" fill-opacity="0.28"/>
+    <rect x="1042" y="288" width="62" height="13" rx="6.5" fill="#ffffff" fill-opacity="0.22"/>
+
+    <rect x="478" y="328" width="644" height="42" rx="12" fill="#ffffff" fill-opacity="0.035"/>
+    <rect x="492" y="338" width="22" height="22" rx="7" fill="#ffffff" fill-opacity="0.1"/>
+    <rect x="532" y="342" width="212" height="13" rx="6.5" fill="#ffffff" fill-opacity="0.2"/>
+    <rect x="1042" y="342" width="62" height="13" rx="6.5" fill="#ffffff" fill-opacity="0.16"/>
+
+    <rect x="478" y="382" width="644" height="42" rx="12" fill="#ffffff" fill-opacity="0.03"/>
+    <rect x="492" y="392" width="22" height="22" rx="7" fill="#ffffff" fill-opacity="0.08"/>
+    <rect x="532" y="396" width="240" height="13" rx="6.5" fill="#ffffff" fill-opacity="0.16"/>
+    <rect x="1042" y="396" width="62" height="13" rx="6.5" fill="#ffffff" fill-opacity="0.13"/>
+
+    <line x1="478" y1="444" x2="1122" y2="444" stroke="#ffffff" stroke-opacity="0.07"/>
+
+    <!-- total -->
+    <text x="500" y="490" font-family="'Segoe UI', Arial, sans-serif" font-size="13" letter-spacing="4" fill="#ffffff" fill-opacity="0.42">TOTAL</text>
+    <rect x="1012" y="478" width="92" height="16" rx="8" fill="#f97316" fill-opacity="0.85"/>
+  </g>
+
+  <!-- state machine -->
+  <g font-family="'Segoe UI', Arial, sans-serif">
+    <text x="600" y="604" text-anchor="middle" font-size="13" letter-spacing="3" fill="#f97316" fill-opacity="0.85">PENDING</text>
+    <text x="800" y="604" text-anchor="middle" font-size="13" letter-spacing="3" fill="#f97316" fill-opacity="0.85">CONFIRMED</text>
+    <text x="1000" y="604" text-anchor="middle" font-size="13" letter-spacing="3" fill="#ffffff" fill-opacity="0.4">FULFILLED</text>
+
+    <circle cx="600" cy="652" r="22" fill="#f97316" fill-opacity="0.9"/>
+    <path d="M591 652 l6 7 13 -15" fill="none" stroke="#0a0a0c" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <circle cx="800" cy="652" r="22" fill="#f97316" fill-opacity="0.9"/>
+    <path d="M791 652 l6 7 13 -15" fill="none" stroke="#0a0a0c" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <circle cx="1000" cy="652" r="22" fill="none" stroke="#ffffff" stroke-opacity="0.2" stroke-width="3"/>
+
+    <g stroke="#f97316" stroke-opacity="0.45" stroke-width="3" stroke-linecap="round" fill="none">
+      <line x1="624" y1="652" x2="772" y2="652"/>
+      <line x1="824" y1="652" x2="972" y2="652"/>
+    </g>
+    <g stroke="#f97316" stroke-opacity="0.6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none">
+      <path d="M764 644 l9 8 -9 8"/>
+      <path d="M964 644 l9 8 -9 8"/>
+    </g>
+  </g>
+
+  <!-- cancellation branch · stock restored -->
+  <line x1="800" y1="676" x2="800" y2="706" stroke="#ffffff" stroke-opacity="0.22" stroke-width="2" stroke-dasharray="5 6"/>
+  <path d="M793 700 l7 8 7 -8" fill="none" stroke="#ffffff" stroke-opacity="0.22" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="650" y="710" width="300" height="42" rx="21" fill="#ffffff" fill-opacity="0.03" stroke="#ffffff" stroke-opacity="0.14" stroke-dasharray="6 6"/>
+  <text x="800" y="737" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="12" letter-spacing="2.5" fill="#ffffff" fill-opacity="0.45">CANCELLED · STOCK RESTORED</text>
+
+  <g fill="#f97316" fill-opacity="0.5">
+    <circle cx="1290" cy="316" r="5"/>
+    <circle cx="1342" cy="596" r="5"/>
+    <circle cx="254" cy="386" r="5"/>
+    <circle cx="306" cy="762" r="5"/>
+    <circle cx="1226" cy="788" r="5"/>
+  </g>
+
+  <g font-family="'Segoe UI', Arial, sans-serif">
+    <text x="72" y="852" font-family="Georgia, serif" font-style="italic" font-size="56" fill="#ffffff" fill-opacity="0.95">OrderFlow</text>
+    <text x="76" y="904" font-size="18" letter-spacing="5" fill="#f97316">ORDER MANAGEMENT · NODE + SQLITE</text>
+    <text x="1524" y="200" text-anchor="end" font-size="150" font-weight="700" fill="#ffffff" fill-opacity="0.05">08</text>
+  </g>
+
+  <rect width="1600" height="1000" filter="url(#nz)" opacity="0.045"/>
+</svg>

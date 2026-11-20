@@ -1,0 +1,124 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1a0b10"/>
+      <stop offset="1" stop-color="#0a0a0c"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.45" r="0.62">
+      <stop offset="0" stop-color="#f43f5e" stop-opacity="0.13"/>
+      <stop offset="1" stop-color="#f43f5e" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="50" height="50" patternUnits="userSpaceOnUse">
+      <path d="M50 0H0V50" fill="none" stroke="#ffffff" stroke-opacity="0.03"/>
+    </pattern>
+    <filter id="nz"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2"/></filter>
+  </defs>
+
+  <rect width="1600" height="1000" fill="url(#bg)"/>
+  <rect width="1600" height="1000" fill="url(#glow)"/>
+  <rect width="1600" height="1000" fill="url(#grid)"/>
+
+  <circle cx="800" cy="420" r="372" fill="none" stroke="#f43f5e" stroke-opacity="0.07" stroke-width="2"/>
+
+  <!-- other tenants, dimmed and walled off -->
+  <g>
+    <rect x="250" y="250" width="260" height="330" rx="22" fill="#ffffff" fill-opacity="0.018" stroke="#ffffff" stroke-opacity="0.05"/>
+    <rect x="286" y="286" width="120" height="12" rx="6" fill="#ffffff" fill-opacity="0.09"/>
+    <rect x="286" y="310" width="80" height="9" rx="4.5" fill="#ffffff" fill-opacity="0.06"/>
+    <g stroke="#ffffff" stroke-opacity="0.1" stroke-width="3" fill="none">
+      <rect x="352" y="392" width="56" height="42" rx="9"/>
+      <path d="M365 392 v-11 a15 15 0 0 1 30 0 v11"/>
+    </g>
+    <text x="380" y="486" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="11" letter-spacing="3" fill="#ffffff" fill-opacity="0.18">TENANT A</text>
+
+    <rect x="1090" y="250" width="260" height="330" rx="22" fill="#ffffff" fill-opacity="0.018" stroke="#ffffff" stroke-opacity="0.05"/>
+    <rect x="1156" y="286" width="120" height="12" rx="6" fill="#ffffff" fill-opacity="0.09"/>
+    <rect x="1176" y="310" width="80" height="9" rx="4.5" fill="#ffffff" fill-opacity="0.06"/>
+    <g stroke="#ffffff" stroke-opacity="0.1" stroke-width="3" fill="none">
+      <rect x="1192" y="392" width="56" height="42" rx="9"/>
+      <path d="M1205 392 v-11 a15 15 0 0 1 30 0 v11"/>
+    </g>
+    <text x="1220" y="486" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="11" letter-spacing="3" fill="#ffffff" fill-opacity="0.18">TENANT B</text>
+  </g>
+
+  <!-- tenant boundary -->
+  <line x1="527" y1="230" x2="527" y2="612" stroke="#ffffff" stroke-opacity="0.09" stroke-width="2" stroke-dasharray="5 8"/>
+  <line x1="1073" y1="230" x2="1073" y2="612" stroke="#ffffff" stroke-opacity="0.09" stroke-width="2" stroke-dasharray="5 8"/>
+
+  <!-- active workspace -->
+  <g>
+    <rect x="545" y="140" width="510" height="470" rx="26" fill="#ffffff" fill-opacity="0.045" stroke="#ffffff" stroke-opacity="0.09"/>
+    <rect x="575" y="140" width="450" height="5" rx="2.5" fill="#f43f5e" fill-opacity="0.7"/>
+
+    <!-- header -->
+    <rect x="575" y="170" width="44" height="44" rx="12" fill="#f43f5e" fill-opacity="0.15" stroke="#f43f5e" stroke-opacity="0.35"/>
+    <text x="597" y="199" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="15" font-weight="700" letter-spacing="1" fill="#f43f5e">TF</text>
+
+    <rect x="637" y="180" width="204" height="14" rx="7" fill="#ffffff" fill-opacity="0.28"/>
+    <rect x="637" y="204" width="132" height="9" rx="4.5" fill="#ffffff" fill-opacity="0.14"/>
+
+    <rect x="930" y="176" width="100" height="32" rx="16" fill="#f43f5e" fill-opacity="0.12" stroke="#f43f5e" stroke-opacity="0.35"/>
+    <text x="980" y="197" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="11" letter-spacing="2" fill="#f43f5e" fill-opacity="0.9">OWNER</text>
+
+    <line x1="575" y1="236" x2="1025" y2="236" stroke="#ffffff" stroke-opacity="0.07"/>
+
+    <!-- members -->
+    <text x="575" y="268" font-family="'Segoe UI', Arial, sans-serif" font-size="11" letter-spacing="3" fill="#ffffff" fill-opacity="0.38">MEMBERS</text>
+
+    <circle cx="597" cy="300" r="17" fill="#f43f5e" fill-opacity="0.22" stroke="#f43f5e" stroke-opacity="0.45"/>
+    <circle cx="632" cy="300" r="17" fill="#ffffff" fill-opacity="0.07" stroke="#ffffff" stroke-opacity="0.14"/>
+    <circle cx="667" cy="300" r="17" fill="#ffffff" fill-opacity="0.07" stroke="#ffffff" stroke-opacity="0.14"/>
+    <text x="667" y="305" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="12" fill="#ffffff" fill-opacity="0.4">+</text>
+
+    <rect x="815" y="286" width="210" height="30" rx="15" fill="#ffffff" fill-opacity="0.03" stroke="#ffffff" stroke-opacity="0.14" stroke-dasharray="6 6"/>
+    <text x="920" y="306" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="11" letter-spacing="2" fill="#ffffff" fill-opacity="0.45">INVITE · TF-9A2C</text>
+
+    <!-- tasks -->
+    <rect x="575" y="340" width="450" height="54" rx="14" fill="#ffffff" fill-opacity="0.05"/>
+    <rect x="591" y="356" width="22" height="22" rx="7" fill="#f43f5e" fill-opacity="0.85"/>
+    <path d="M597 367 l4 5 9 -10" fill="none" stroke="#0a0a0c" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="627" y="358" width="196" height="12" rx="6" fill="#ffffff" fill-opacity="0.26"/>
+    <rect x="627" y="378" width="118" height="8" rx="4" fill="#ffffff" fill-opacity="0.1"/>
+    <rect x="920" y="353" width="86" height="26" rx="13" fill="#f43f5e" fill-opacity="0.14" stroke="#f43f5e" stroke-opacity="0.4"/>
+    <text x="963" y="371" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="10" letter-spacing="1.8" fill="#f43f5e" fill-opacity="0.9">DONE</text>
+
+    <rect x="575" y="404" width="450" height="54" rx="14" fill="#ffffff" fill-opacity="0.035"/>
+    <rect x="591" y="420" width="22" height="22" rx="7" fill="none" stroke="#ffffff" stroke-opacity="0.22" stroke-width="2"/>
+    <rect x="627" y="422" width="164" height="12" rx="6" fill="#ffffff" fill-opacity="0.2"/>
+    <rect x="627" y="442" width="96" height="8" rx="4" fill="#ffffff" fill-opacity="0.08"/>
+    <rect x="920" y="417" width="86" height="26" rx="13" fill="#ffffff" fill-opacity="0.05" stroke="#ffffff" stroke-opacity="0.16"/>
+    <text x="963" y="435" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="10" letter-spacing="1.8" fill="#ffffff" fill-opacity="0.45">DOING</text>
+
+    <rect x="575" y="468" width="450" height="54" rx="14" fill="#ffffff" fill-opacity="0.03"/>
+    <rect x="591" y="484" width="22" height="22" rx="7" fill="none" stroke="#ffffff" stroke-opacity="0.18" stroke-width="2"/>
+    <rect x="627" y="486" width="212" height="12" rx="6" fill="#ffffff" fill-opacity="0.16"/>
+    <rect x="627" y="506" width="86" height="8" rx="4" fill="#ffffff" fill-opacity="0.07"/>
+    <rect x="920" y="481" width="86" height="26" rx="13" fill="#ffffff" fill-opacity="0.04" stroke="#ffffff" stroke-opacity="0.13"/>
+    <text x="963" y="499" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="10" letter-spacing="1.8" fill="#ffffff" fill-opacity="0.38">TODO</text>
+
+    <!-- completion -->
+    <text x="575" y="562" font-family="'Segoe UI', Arial, sans-serif" font-size="11" letter-spacing="3" fill="#ffffff" fill-opacity="0.38">COMPLETION</text>
+    <text x="1025" y="562" text-anchor="end" font-family="'Segoe UI', Arial, sans-serif" font-size="12" fill="#f43f5e" fill-opacity="0.85">46%</text>
+    <rect x="575" y="574" width="450" height="8" rx="4" fill="#ffffff" fill-opacity="0.07"/>
+    <rect x="575" y="574" width="207" height="8" rx="4" fill="#f43f5e" fill-opacity="0.85"/>
+  </g>
+
+  <!-- isolation markers -->
+  <text x="800" y="668" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="11" letter-spacing="4" fill="#f43f5e" fill-opacity="0.55">SERVER-SIDE TENANT ISOLATION · 403</text>
+
+  <g fill="#f43f5e" fill-opacity="0.5">
+    <circle cx="1290" cy="316" r="5"/>
+    <circle cx="294" cy="596" r="5"/>
+    <circle cx="252" cy="386" r="5"/>
+    <circle cx="1352" cy="762" r="5"/>
+    <circle cx="1226" cy="818" r="5"/>
+  </g>
+
+  <g font-family="'Segoe UI', Arial, sans-serif">
+    <text x="72" y="852" font-family="Georgia, serif" font-style="italic" font-size="56" fill="#ffffff" fill-opacity="0.95">TeamForge</text>
+    <text x="76" y="904" font-size="18" letter-spacing="5" fill="#f43f5e">MULTI-TENANT PROJECT SAAS · EXPRESS + SQLITE</text>
+    <text x="1524" y="200" text-anchor="end" font-size="150" font-weight="700" fill="#ffffff" fill-opacity="0.05">09</text>
+  </g>
+
+  <rect width="1600" height="1000" filter="url(#nz)" opacity="0.045"/>
+</svg>

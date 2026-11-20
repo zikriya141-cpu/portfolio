@@ -42,7 +42,7 @@ const CONFIG = {
       "I’m still early in this. I’d rather ship something small that works, then improve it, than plan a perfect system I never finish."
     ],
     stats: [
-      { value: "8",    label: "Projects built" },
+      { value: "9",    label: "Projects built" },
       { value: "81%",  label: "Best model accuracy" },
       { value: "17",   label: "Tests on EduPredict" },
       { value: "2026", label: "Graduating" }
@@ -203,6 +203,21 @@ const CONFIG = {
       repo: "orderflow",
       accent: "#f97316",
       wide: true
+    },
+    {
+      title: "TeamForge",
+      category: "Web",
+      year: "2026",
+      cover: "assets/works/teamforge.svg",
+      gallery: ["assets/works/teamforge.svg"],
+      summary:
+        "A multi-tenant project management workspace, built as the final capstone of a remote internship. Teams sign in with bcrypt-hashed passwords, then create a workspace or join one with an invite code. Projects and tasks live inside that workspace only: every request is checked against the membership table on the server, so reaching for another team’s data returns 403 instead of a filtered list. A dashboard sums task counts, completion rate and per-member workload straight from SQLite.",
+      note: "One database, many workspaces — and a 403 if you step outside yours.",
+      stack: ["Node.js", "Express", "node:sqlite", "bcryptjs", "JavaScript"],
+      metrics: ["16 REST endpoints", "6 linked tables", "5 security tests", "Owner / member roles"],
+      repo: "teamforge",
+      accent: "#f43f5e",
+      wide: true
     }
   ],
 
@@ -223,7 +238,7 @@ const CONFIG = {
   },
 
   // ---------------------------------------------------------------- section copy
-  workSub: "Eight projects, from a chest X-ray screener to this page.",
+  workSub: "Nine projects, from a chest X-ray screener to this page.",
   footerHeading: "Get in touch",
   footerNote: "Hand-written HTML, CSS and JS.",
 
